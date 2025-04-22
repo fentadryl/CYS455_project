@@ -16,7 +16,7 @@ int main() {
     Movie *movies = NULL;
     int count = 0;
 
-    get_user_filename(filename, sizeof(filename));
+    get_profile(filename, sizeof(filename));
     load_movies(filename, &movies, &count); // <-- Load saved movies
 
     int choice;
