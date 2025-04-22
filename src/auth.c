@@ -7,6 +7,8 @@
 #include "auth.h"
 #include "ui.h"
 
+#include "picosha2.h"
+
 void get_user_filename(char *filename, size_t size) {
 
     char username[50];
