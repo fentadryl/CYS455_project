@@ -7,7 +7,6 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # Include directories
 include_directories(MovieManager PRIVATE 
     ${CMAKE_SOURCE_DIR}/include
-    ${OPENSSL_INCLUDE_DIR}
 )
 
 # Source files
