@@ -22,7 +22,7 @@ set(SOURCES
 # Create executable
 add_executable(MovieManager ${SOURCES})
 
-set(OPENSSL_ROOT_DIR "C:/OpenSSL-Win64" CACHE PATH "OpenSSL root directory")
+set(OPENSSL_ROOT_DIR "C:/Program Files/OpenSSL-Win64" CACHE PATH "OpenSSL root directory")
 
 # Find OpenSSL package (required for SHA256)
 find_package(OpenSSL REQUIRED)
