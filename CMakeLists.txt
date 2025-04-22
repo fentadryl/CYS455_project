@@ -16,8 +16,8 @@ set(SOURCES
         src/ui.c
         src/auth.c
         src/main.c
+        src/sha256.c
 )
 
 # Create executable
 add_executable(MovieManager ${SOURCES})
-
