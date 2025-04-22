@@ -4,7 +4,7 @@ project(MovieManager C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-# Include directories - prefer target_include_directories
+# Include directories
 include_directories(MovieManager PRIVATE 
     ${CMAKE_SOURCE_DIR}/include
     ${OPENSSL_INCLUDE_DIR}
@@ -22,10 +22,3 @@ set(SOURCES
 # Create executable
 add_executable(MovieManager ${SOURCES})
 
-set(OPENSSL_ROOT_DIR "C:/Program Files/OpenSSL-Win64" CACHE PATH "OpenSSL root directory")
-
-# Find OpenSSL package (required for SHA256)
-find_package(OpenSSL REQUIRED)
-
-# Link OpenSSL
-target_link_libraries(MovieManager PRIVATE OpenSSL::Crypto)
