@@ -1,7 +1,3 @@
-//
-// Created by Ben on 4/22/2025.
-//
-
 /*********************************************************************
 * Filename:   sha256.h
 * Author:     Brad Conte (brad AT bradconte.com)
