@@ -1,6 +1,8 @@
-//
-// Created by Abel on 4/21/2025
-//
+/*
+    Authors : Abel Kloter
+    CS455 - Secure Software Development Final Project
+    Verification version
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,6 +16,11 @@
 #define REVIEW_LEN 500
 #define LINE_LEN 700
 
+// Primary author:       Abel Kloter
+// Description:          Check for duplicate movie entries by title and year
+// Inputs:               pointer to Movie array, current count, title string, year integer
+// Outputs:              returns 1 if duplicate found, 0 otherwise
+// Vulnerability ID 7-1: (Failure to Handle Errors Correctly) – prevents adding duplicates and informs user
 int is_duplicate(Movie *movies, int count, const char *title, int year) {
     for (int i = 0; i < count; i++) {
         if (strcmp(movies[i].title, title) == 0 && movies[i].year == year)
