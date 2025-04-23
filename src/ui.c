@@ -13,10 +13,10 @@
 #include "movie.h"
 
 // Primary author:       Andrew Krasuski
-// Description:          Print the main menu options for the Movie Manager.
+// Description:          Print the main menu options for the Movie Manager
 // Inputs:               none
 // Outputs:              writes menu text to stdout
-// Vulnerability ID 9-1: (Poor Usability) – clear, numbered prompts guide the user.
+// Vulnerability ID 9-1: (Poor Usability) – clear, numbered prompts guide the user
 void print_menu() {
     printf("\nMovie Manager Menu:\n");
     printf("1. Add Movie\n");
@@ -29,11 +29,11 @@ void print_menu() {
 }
 
 // Primary author:       Andrew Krasuski
-// Description:          Safely read an integer from stdin, validating format and range.
+// Description:          Safely read an integer from stdin, validating format and range
 // Inputs: none          (reads via fgets inside)
 // Outputs:              returns valid int, or -1 on invalid input
-// Vulnerability ID 3-3: (Integer Overflows) – uses errno, strtol, and bounds checking to avoid overflow.
-// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – returns -1 on bad input rather than undefined behavior.
+// Vulnerability ID 3-3: (Integer Overflows) – uses errno, strtol, and bounds checking to avoid overflow
+// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – returns -1 on bad input rather than undefined behavior
 int safe_int_input() {
     char buf[20];
     long val;
@@ -49,11 +49,11 @@ int safe_int_input() {
 }
 
 / Primary author:        Andrew Krasuski
-// Description:          Safely read a line of text from stdin, removing newline and checking for errors.
+// Description:          Safely read a line of text from stdin, removing newline and checking for errors
 // Inputs:               buffer pointer and its size
 // Outputs:              buffer filled with user input, exits on read error
-// Vulnerability ID 1-1: (Buffer Overruns) – uses fgets with explicit size limit and null-termination.
-// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – checks fgets return and exits gracefully on error.
+// Vulnerability ID 1-1: (Buffer Overruns) – uses fgets with explicit size limit and null-termination
+// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – checks fgets return and exits gracefully on error
 void safe_input(char *buffer, size_t size) {
     if (fgets(buffer, size, stdin) == NULL) {
         fprintf(stderr, "Input error.\n");
