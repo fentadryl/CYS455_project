@@ -48,7 +48,7 @@ int safe_int_input() {
     return (int)val;
 }
 
-/ Primary author:        Andrew Krasuski
+// Primary author:        Andrew Krasuski
 // Description:          Safely read a line of text from stdin, removing newline and checking for errors
 // Inputs:               buffer pointer and its size
 // Outputs:              buffer filled with user input, exits on read error
