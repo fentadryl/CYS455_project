@@ -33,7 +33,7 @@ void print_menu() {
 // Inputs: none          (reads via fgets inside)
 // Outputs:              returns valid int, or -1 on invalid input
 // Vulnerability ID 3-3: (Integer Overflows) – uses errno, strtol, and bounds checking to avoid overflow
-// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – returns -1 on bad input rather than undefined behavior
+// Vulnerability ID 6-6: (Failure to Handle Errors Correctly) – returns -1 on bad input rather than undefined behavior
 int safe_int_input() {
     char buf[20];
     long val;
@@ -53,7 +53,7 @@ int safe_int_input() {
 // Inputs:               buffer pointer and its size
 // Outputs:              buffer filled with user input, exits on read error
 // Vulnerability ID 1-1: (Buffer Overruns) – uses fgets with explicit size limit and null-termination
-// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – checks fgets return and exits gracefully on error
+// Vulnerability ID 6-5: (Failure to Handle Errors Correctly) – checks fgets return and exits gracefully on error
 void safe_input(char *buffer, size_t size) {
     if (fgets(buffer, size, stdin) == NULL) {
         fprintf(stderr, "Input error.\n");
