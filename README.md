@@ -1,6 +1,3 @@
-//
-/// Written by Andrew on 4/23/2025
-//
 
 # Movie Manager CLI
 
