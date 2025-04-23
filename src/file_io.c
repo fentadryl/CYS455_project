@@ -15,11 +15,11 @@
 
 
 // Primary author:       Abel Kloter
-// Description:          Save an array of Movie structs to a file, one per line, using '|' as field separator.
+// Description:          Save an array of Movie structs to a file, one per line, using '|' as field separator
 // Inputs:               filename string, pointer to Movie array, count of movies
-// Outputs:              prints success or error message; writes to file; does not crash on write error.
-// Vulnerability ID 6-2: (Failure to Handle Errors Correctly) – checks fopen result and perror on fopen failure.
-// Vulnerability ID 6-2: (Failure to Handle Errors Correctly) – checks fprintf return value, prints to stderr and aborts early on error.
+// Outputs:              prints success or error message; writes to file; does not crash on write error
+// Vulnerability ID 6-2: (Failure to Handle Errors Correctly) – checks fopen result and perror on fopen failure
+// Vulnerability ID 6-2: (Failure to Handle Errors Correctly) – checks fprintf return value, prints to stderr and aborts early on error
 void save_movies(const char *filename, Movie *movies, int count) {
     FILE *fp = fopen(filename, "w");
     if (!fp) {
@@ -45,11 +45,11 @@ void save_movies(const char *filename, Movie *movies, int count) {
 }
 
 // Primary author:       Abel Kloter
-// Description:          Load movies from a file into a dynamically resized array.
+// Description:          Load movies from a file into a dynamically resized array
 // Inputs:               filename, pointer to Movie* array, pointer to count
-// Outputs:              populates *movies and *count; reallocs array; handles missing file as non-fatal.
-// Vulnerability ID 3-2: (Integer Overflows) – checks *count against INT_MAX/sizeof(Movie) to avoid overflow on realloc count.
-// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – checks realloc return and perror on failure.
+// Outputs:              populates *movies and *count; reallocs array; handles missing file as non-fatal
+// Vulnerability ID 3-2: (Integer Overflows) – checks *count against INT_MAX/sizeof(Movie) to avoid overflow on realloc count
+// Vulnerability ID 6-3: (Failure to Handle Errors Correctly) – checks realloc return and perror on failure
 void load_movies(const char *filename, Movie **movies, int *count) {
     FILE *fp = fopen(filename, "r");
     if (!fp) {
