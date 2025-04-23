@@ -36,7 +36,7 @@ A simple command-line movie manager written in C with secure user authentication
 ## How to Compile
 
 ```bash
-gcc main.c auth.c file_io.c movie.c sha256.c ui.c -o movie_manager
+gcc main.c auth.c file_io.c movie.c sha256.c ui.c -o MovieManager
 ```
 
 Or can use CMAKE
@@ -53,7 +53,7 @@ This project uses only standard C libraries, no external dependencies.
 
 1. Run the program:
    ```bash
-   ./movie_manager
+   ./MovieManager
    ```
 
 2. Enter your username and password.
