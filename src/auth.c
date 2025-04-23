@@ -166,10 +166,10 @@ int register_user(const char *username, const char *password) {
 }
 
 // Primary author:        Benjamin Rolfe
-// Description:           Verify provided credentials against stored values.
+// Description:           Verify provided credentials against stored values
 // Inputs:                username, password
-// Outputs:               returns 1 if match, 0 otherwise.
-// Vulnerability ID 12-2: (Failure to Protect Stored Data) – secure comparison of computed and stored hash.
+// Outputs:               returns 1 if match, 0 otherwise
+// Vulnerability ID 12-2: (Failure to Protect Stored Data) – secure comparison of computed and stored hash
 int verify_user(const char *username, const char *password) {
     char stored_salt[SALT_LENGTH + 1];
     char stored_hash[HASH_LENGTH + 1];
@@ -186,10 +186,10 @@ int verify_user(const char *username, const char *password) {
 }
 
 // Primary author:       Benjamin Rolfe
-// Description:          Prompt for login or registration until successful, then set profile filename.
+// Description:          Prompt for login or registration until successful, then set profile filename
 // Inputs:               filename buffer and its size
-// Outputs:              filename set to "<user>_movies.txt"; prints guiding messages.
-// Vulnerability ID 9-2: (Poor Usability) – offers retry loop with clear options for login or register.
+// Outputs:              filename set to "<user>_movies.txt"; prints guiding messages
+// Vulnerability ID 9-2: (Poor Usability) – offers retry loop with clear options for login or register
 void get_profile(char *filename, size_t size) {
     char username[MAX_USERNAME_LEN];
     char password[MAX_PASSWORD_LEN];
