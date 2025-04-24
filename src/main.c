@@ -1,9 +1,3 @@
-/*
-    Authors :  Andrew Krasuski
-    CS455 - Secure Software Development Final Project
-    Verification version
-*/
-
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -12,13 +6,6 @@
 #include "ui.h"
 #include "auth.h"
 
-
-// Primary author:       Andrew Krasuski
-// Description:          Entry point for the Movie Manager application; handles user authentication and main menu loop
-// Inputs:               none (uses get_profile to obtain user file)
-// Outputs:              interactive menu-driven program; returns EXIT_SUCCESS on exit
-// Vulnerability ID 9-5: (Poor Usability) – handles invalid menu choices with clear feedback
-// Vulnerability ID 6-B: (Failure to Handle Errors Correctly) – cleans up dynamic memory before exit
 int main() {
     char filename[128];
     Movie *movies = NULL;
