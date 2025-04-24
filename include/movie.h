@@ -1,7 +1,3 @@
-//
-// Created by Ben on 4/21/2025.
-//
-
 #ifndef MOVIE_H
 #define MOVIE_H
 
