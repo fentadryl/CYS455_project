@@ -36,7 +36,9 @@ A simple command-line movie manager written in C with secure user authentication
 ## How to Compile
 
 ```bash
-gcc main.c auth.c file_io.c movie.c sha256.c ui.c -o MovieManager
+git clone https://github.com/fentadryl/CYS455_project.git
+cd CYS445_project/src
+gcc -I../include *.c -o output
 ```
 
 Or can use CMAKE
