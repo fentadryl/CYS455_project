@@ -36,14 +36,14 @@ A simple command-line movie manager written in C with secure user authentication
 ## How to Compile
 
 ```bash
-git clone https://github.com/fentadryl/CYS455_project.git
+git clone https://github.com/fentadryl/CYS455_project.git --> can ignore this if you downloaded the repo from ZIP
 cd CYS445_project/src
-gcc -I../include *.c -o output
+gcc -I../include *.c -o MovieManager
 ```
 
 Or can use CMAKE
 ```bash
-git clone https://github.com/fentadryl/CYS455_project.git
+git clone https://github.com/fentadryl/CYS455_project.git --> can ignore this if you downloaded the repo from ZIP
 cd CYS455_project/build
 cmake ..
 make
@@ -56,7 +56,7 @@ This project uses only standard C libraries, no external dependencies.
 1. Run the program:
    ```bash
    ./MovieManager
-   ```
+  
 
 2. Enter your username and password.
    - If the user is new, you will be prompted to register.
